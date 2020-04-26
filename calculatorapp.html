@@ -21,6 +21,7 @@
 	 <br></br>
 	 <button onclick="calculate1()">Even or Odd</button>
 	  <button onclick="pallindrome()">pallindrome</button>
+	  <button onclick="armstrong()">armstrong</button>
        <Script>
 	    function addition()
 		{
@@ -131,6 +132,28 @@
 					document.getElementById("answer").innerHTML="this is not pallindrome ";
 				}
 			}
+	       function armstrong()
+			{
+				var r, z, b = 0;
+				var a = document.getElementById("num1").value;
+
+				z = a;
+				while(a>0)
+				{
+					r = a%10;
+					a = parseInt(a/10);
+					b= b+r*r*r;
+				}
+				if(b==z)
+				{
+					document.getElementById("answer").innerHTML="this is an armstrong number";
+				}
+				else
+				{
+					document.getElementById("answer").innerHTML="this is not an armstrong number";
+				}
+			}
+	  
 	  /* function pallindrome()
 	   {
 	    var a=document.getElementById("num1").value;
